@@ -9,22 +9,41 @@
     <link rel="stylesheet" href="css/3_Portfolio.css" />
     <link rel="stylesheet" href="css/4_Contact.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/bg_change_btn.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
   <body>
-    <div id="header">
+    <!--------------------------------BG change Button----------------------------------->
+    <button class="mode">
+      <div class="sun"><i class="fa-solid fa-sun"></i></div>
+      <div class="moon"><i class="fa-solid fa-moon"></i></div>
+    </button>
+
+    <!-------------------------------------Home-------------------------------------->
+    <div id="header" class="bounce">
       <div class="container">
-        <nav>
-          <img src="./css/images/logo.jpg" class="logo" />
+        <nav class="nav">
+          <img src="./css/images/logo.jpg" class="logo bounce" />
           <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="delay_bounce">
+              <a href="#header" class="first">Home</a>
+            </li>
+            <li class="delay_bounce">
+              <a href="#about" class="second">About</a>
+            </li>
+            <li class="delay_bounce">
+              <a href="#services" class="third">Services</a>
+            </li>
+            <li class="delay_bounce">
+              <a href="#portfolio" class="fourth">Portfolio</a>
+            </li>
+            <li class="delay_bounce">
+              <a href="#contact" class="fifth">Contact</a>
+            </li>
+
             <i class="fas fa-times" onclick="closemenu()"></i>
           </ul>
           <div class="barrs">
@@ -45,9 +64,9 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="./css/images/user.png" />
+            <img src="./css/images/user.jpg" class="delay_bounce" />
           </div>
-          <div class="about-col-2">
+          <div class="about-col-2 user_bounce">
             <h1 class="sub-title">About Me</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla
@@ -58,15 +77,9 @@
               accumsan libero.
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
-                Experience
-              </p>
-              <p class="tab-links on" onclick="opentab('education')">
-                Education
-              </p>
+              <p class="tab-links skl" onclick="skl()">Skills</p>
+              <p class="tab-links exp" onclick="exp()">Experience</p>
+              <p class="tab-links edu" onclick="edu()">Education</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
@@ -108,9 +121,9 @@
       </div>
     </div>
     <!----------------------------------- Services ------------------------------------->
-    <div id="services">
+    <div id="services " class="bounce">
       <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title" id="#change">My Services</h1>
         <div class="services-list">
           <div>
             <i class="fa-solid fa-code"></i>
@@ -143,7 +156,7 @@
       </div>
     </div>
     <!-- -----------------------------Portfolio------------------------------------ -->
-    <div id="portfolio">
+    <div id="portfolio" class="bounce">
       <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
@@ -197,16 +210,22 @@
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
 
-            <p><i class="fa-solid fa-paper-plane"></i>meet@example.com</p>
+            <p><i class="fa-solid fa-paper-plane"></i>meet21@example.com</p>
 
-            <p><i class="fa-solid fa-square-phone"></i>987654321</p>
+            <p><i class="fa-solid fa-square-phone"></i>9998887776</p>
             <div class="social-icons">
-              <a href="https://facebook.com/"
+              <a href="https://facebook.com/" target="_blank"
                 ><i class="fa-brands fa-facebook"></i
               ></a>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/i/flow/login" target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </div>
             <a href="/css/images/my-cv.pdf" download class="btn btn2"
               >Download</a
@@ -239,10 +258,10 @@
       </div>
       <div class="copyright">
         <p>🔘Copyright &copy; 🔘Privacy policy🔘Agreement</p>
-        <!-- <p>👑Made by @_m_e_e_t_patel_00👑</p> -->
       </div>
     </div>
-    <script src="/Js/Home.js"></script>
-    <script src="/Js/Services.js"></script>
+    <script src="./Js/Home.js"></script>
+    <script src="./Js/Services.js"></script>
+    <script src="./Js/animation.js"></script>
   </body>
 </html>
